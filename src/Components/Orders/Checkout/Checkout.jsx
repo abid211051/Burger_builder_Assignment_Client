@@ -67,7 +67,7 @@ class Checkout extends Component {
                         modalMsg: "Order Placed Successfully!",
                     })
                     this.props.resetIngredients();
-                    this.props.history.push('/orders')
+                    window.location.replace(response.data.url)
                 } else {
                     this.setState({
                         isLoading: false,
