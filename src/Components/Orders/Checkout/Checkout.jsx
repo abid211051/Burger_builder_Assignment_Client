@@ -58,7 +58,7 @@ class Checkout extends Component {
             userId: this.props.userId,
         }
 
-        axios.post("http://localhost:3001/order", order)
+        axios.post("https://burger-builder-assignment-server.vercel.app/order", order)
             .then(response => {
                 if (response.status === 200) {
                     this.setState({

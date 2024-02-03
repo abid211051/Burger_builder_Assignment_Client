@@ -42,7 +42,7 @@ export const orderLoadFailed = () => {
 }
 
 export const fetchOrders = (token, userId) => dispatch => {
-    axios.get(`http://localhost:3001/api/orders/${userId}`)
+    axios.get(`https://burger-builder-assignment-server.vercel.app/api/orders/${userId}`)
         .then(response => {
             dispatch(loadOrders(response.data));
         })
